@@ -1,6 +1,6 @@
 {
   "name": "async-redux-router",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "async router, redux router, react router",
   "scripts": {
     "babel": "babel src --out-dir lib"
