@@ -5,3 +5,4 @@
 .jsbeautifyrc
 .npmignore
 test/
+example/
