@@ -9,6 +9,10 @@
   "author": "YJJA",
   "license": "MIT",
   "main": "./lib/index.js",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/YJJA/async-redux-router.git"
+  },
   "devDependencies": {
     "babel-cli": "^6.24.0",
     "babel-core": "^6.24.0",
