@@ -1,0 +1,14 @@
+{
+  "html": {
+    "allowed_file_extensions": ["htm", "html", "xhtml", "shtml", "xml", "svg", "vue", "cshtml"],
+    "indent_scripts": "normal",
+    "indent_size": 2
+  },
+  "css": {
+    "indent_size": 2
+  },
+  "js": {
+    "indent_size": 2,
+    "brace_style": "collapse"
+  }
+}
