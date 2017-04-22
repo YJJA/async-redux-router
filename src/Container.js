@@ -24,7 +24,7 @@ class Container extends Component {
   render() {
     const {history, Components} = this.props.router
 
-    // 递归渲染
+    // Recursive rendering
     const renderComponents = (Components) => {
       let [Component, ...Children] = Components
       let children = null

@@ -1,4 +1,3 @@
-// 加载路由
 const loadRoutes = (dispatch, location, branch) => {
   const promise = branch.map(({match, route}) => {
     if (typeof window !== 'object' && !route.server) {
@@ -11,9 +10,8 @@ const loadRoutes = (dispatch, location, branch) => {
   })
   return Promise.all(promise)
     .then((Components) => {
-      // 初始化页面数据
+      // Initializing Components data
       const promise = Components.map(Component => {
-        // 初始化页面数据，只在服务端进行，客户端不初始化
         if (typeof window !== 'object' && Component && typeof Component.getInitialProps === 'function') {
           return Component.getInitialProps(dispatch, location)
         }

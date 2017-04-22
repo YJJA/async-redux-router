@@ -1,5 +1,5 @@
 
-// 解析 querystring
+// parse querystring
 export function parse(str) {
   if (!str || typeof str !== 'string') {
     return {}
@@ -20,7 +20,7 @@ export function parse(str) {
   }, {})
 }
 
-// 序列化
+// stringify
 export function stringify(obj) {
   if (!obj || typeof obj !== 'object') {
     return ''
@@ -36,14 +36,14 @@ export function stringify(obj) {
   }).join('&')
 }
 
-// 合并 queryString
+// merge queryString
 export function merge(str, opts) {
   let query = parse(str)
   let query2 = typeof opts === 'string' ? parse(opts) : opts
   return stringify({...query, ...query2})
 }
 
-// 合并 url 上的 query
+// merge query
 export function mergeUrl(url, opts) {
   let [pathname, query = ''] = url.split('?')
   return pathname + '?' + merge(query, opts)

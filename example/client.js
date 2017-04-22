@@ -18,6 +18,4 @@ asyncContainer(store, history, routes).then(() => {
   )
 })
 
-// ./routes.js
-import React from 'react'
 

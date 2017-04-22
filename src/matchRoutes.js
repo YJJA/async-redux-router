@@ -1,3 +1,5 @@
+// https://github.com/ReactTraining/react-router/blob/master/packages/react-router-config/modules/matchRoutes.js
+
 import {matchPath, computeMatch} from './matchPath'
 
 const matchRoutes = (routes, pathname, branch = []) => {

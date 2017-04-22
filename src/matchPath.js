@@ -1,3 +1,5 @@
+// https://github.com/ReactTraining/react-router/blob/master/packages/react-router/modules/matchPath.js
+
 import pathToRegexp from 'path-to-regexp'
 
 const patternCache = {}

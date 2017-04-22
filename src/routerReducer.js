@@ -1,4 +1,3 @@
-
 import {ROUTER_LOCATION_CHANGE} from './routerActions'
 
 const initialState = {
