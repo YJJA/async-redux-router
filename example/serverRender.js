@@ -18,7 +18,7 @@ const serverRender = (req, res, next) => {
   asyncContainer(store, history, routes)
     .then((redirect) => {
       if (redirect) {
-        console.log('服务端重定向：' + redirect)
+        console.log('Server redirection: ' + redirect)
         return res.redirect(301, redirect)
       }
       const context = ReactDOMServer.renderToString(

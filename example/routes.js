@@ -9,20 +9,24 @@ const routes = [
   },
   {
     path: '/index',
-    // 严格匹配
+    // Strict matching
+
     exact: true,
-    // 是否需要服务端渲染
+    // Server render
+
     server: true,
-    // 重定向到这个页面
+    // Redirect to this path
     // redirect: '/redirect',
-    // 权限验证，通过验证不返回值，未通过验证返回跳转 URL
-    // 默认传入当前 state
+
+    // Authentication, through the verification does not return the value, not to return to the jump through validation URL
     auth: (state) => {
       // return '/login?login=true&this=login'
     },
-    // 同步加载组件
+
+    // Synchronous loading component
     // component: Index,
-    // 异步加载组件
+
+    // Asynchronous load component
     asyncComponent: () => {
       const Component = import('./containers/Index')
         .then(result => result.default)

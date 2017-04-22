@@ -13,8 +13,13 @@ const Index = props => {
   )
 }
 
-// 初始化 Props, 可异步，或同步
-// 只方法只会在服务端渲染时调用
-Index.getInitialProps = (dispatch, location) => {
+// getInitialProps
+/**
+ * get Initial Props
+ * @param  {Function} dispatch store.dispatch
+ * @param  {Object} location history.location
+ */
+Index.getInitialProps = async (dispatch, location) => {
   console.log('getInitialProps()')
+  await Promise.resolve()
 }
