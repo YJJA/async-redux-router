@@ -36,19 +36,24 @@ const asyncContainer = (store, history, routes) => {
   }
 
   const dispatch = action => store.dispatch(action)
+  const route = branch[branch.length - 1]
   return loadRoutes(dispatch, history.location, branch)
     .then(Components => {
-      store.dispatch(routerChange(history, Components))
+      store.dispatch(routerChange(history, Components, route))
     })
 }
 
 export default asyncContainer
 
 function authorization(state, branch) {
+  let redirect
   for (var i = 0; i < branch.length; i++) {
     let route = branch[i].route
     if (typeof route.auth === 'function') {
-      return route.auth(state)
+      redirect = route.auth(state)
+      if (redirect) {
+        return redirect
+      }
     }
   }
 }
