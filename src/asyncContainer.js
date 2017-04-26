@@ -36,10 +36,10 @@ const asyncContainer = (store, history, routes) => {
   }
 
   const dispatch = action => store.dispatch(action)
-  const route = branch[branch.length - 1]
+  const match = branch[branch.length - 1].match
   return loadRoutes(dispatch, history.location, branch)
     .then(Components => {
-      store.dispatch(routerChange(history, Components, route))
+      store.dispatch(routerChange(history, Components, match))
     })
 }
 

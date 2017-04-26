@@ -1,13 +1,12 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
-import matchPath from './matchPath'
 
 class Container extends Component {
   static propTypes = {
-    Components: PropTypes.array,
-    route: PropTypes.object,
     router: PropTypes.shape({
+      Components: PropTypes.array,
+      match: PropTypes.object,
       history: PropTypes.object.isRequired
     }).isRequired
   };
@@ -24,8 +23,7 @@ class Container extends Component {
     }
   }
   render() {
-    const {history, Components, route} = this.props.router
-    const match = matchPath(history.location.pathname, route)
+    const {history, Components, match} = this.props.router
 
     // Recursive rendering
     const renderComponents = (Components) => {
