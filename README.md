@@ -8,7 +8,7 @@
 
 ### Dependencies
   ```
-    npm install react redux prop-types history
+    npm install react redux
   ```
 
 ### Features

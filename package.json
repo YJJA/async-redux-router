@@ -13,6 +13,10 @@
     "type" : "git",
     "url" : "https://github.com/YJJA/async-redux-router.git"
   },
+  "dependencies": {
+    "history": "^4.5.1",
+    "prop-types": "^15.5.4"
+  },
   "devDependencies": {
     "babel-cli": "^6.24.0",
     "babel-core": "^6.24.0",
