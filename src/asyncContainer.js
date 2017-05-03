@@ -26,6 +26,11 @@ const asyncContainer = (store, history, routes) => {
       return Promise.resolve(redirect)
     }
 
+    if (/^(https?):\/\//.test(redirect)) {
+      window.location.href = redirect
+      return Promise.resolve()
+    }
+
     history.replace(redirect)
     // console.log(qs.parse(history.location.search.substr(1)))
     return asyncContainer(store, history, routes)
