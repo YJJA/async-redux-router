@@ -1,21 +1,26 @@
 {
   "name": "async-redux-router",
-  "version": "1.0.12",
+  "version": "1.0.15",
   "description": "A async routing for React",
   "scripts": {
     "babel": "babel src --out-dir lib"
   },
-  "keywords": ["async router", "redux router", "react router"],
+  "keywords": [
+    "async router",
+    "redux router",
+    "react router"
+  ],
   "author": "YJJA",
   "license": "MIT",
   "main": "./lib/index.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/YJJA/async-redux-router.git"
+    "type": "git",
+    "url": "https://github.com/YJJA/async-redux-router.git"
   },
   "dependencies": {
-    "history": "^4.5.1",
-    "prop-types": "^15.5.4"
+    "history": "^4.6.1",
+    "lodash": "^4.17.4",
+    "prop-types": "^15.5.8"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",

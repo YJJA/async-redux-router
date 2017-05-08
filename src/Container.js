@@ -9,19 +9,8 @@ class Container extends Component {
       match: PropTypes.object,
       history: PropTypes.object.isRequired
     }).isRequired
-  };
-
-  static childContextTypes = {
-    router: PropTypes.object.isRequired
-  };
-
-  getChildContext() {
-    return {
-      router: {
-        history: this.props.router.history
-      }
-    }
   }
+
   render() {
     const {history, Components, match} = this.props.router
 
@@ -37,11 +26,8 @@ class Container extends Component {
       if (Children.length) {
         children = renderComponents(Children)
       }
-      if (children) {
-        return <Component history={history} match={match}>{children}</Component>
-      }
 
-      return <Component history={history} match={match} />
+      return <Component history={history} match={match} children={children} />
     }
 
     return renderComponents(Components)

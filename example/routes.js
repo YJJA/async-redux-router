@@ -15,12 +15,15 @@ const routes = [
     // Server render
 
     server: true,
-    // Redirect to this path
-    // redirect: '/redirect',
 
     // Authentication, through the verification does not return the value, not to return to the jump through validation URL
-    auth: (state) => {
+    redirect: (state, location) => {
       // return '/login?login=true&this=login'
+
+      return {
+        to: '/login',
+        replace: true
+      }
     },
 
     // Synchronous loading component
