@@ -6,6 +6,7 @@ import _isEmpty from 'lodash/isEmpty'
 import loadRoutes from './loadRoutes'
 import matchRoutes from './matchRoutes'
 import routerChange from './routerActions'
+import qs from './querystring'
 
 let unlisten = null
 
@@ -44,9 +45,10 @@ const asyncContainer = (store, history, routes) => {
 
   const dispatch = action => store.dispatch(action)
   const match = branch[branch.length - 1].match
+  const query = qs.parse(history.location.search.substr(1))
   return loadRoutes(dispatch, history.location, branch)
     .then(Components => {
-      store.dispatch(routerChange(history, Components, match))
+      store.dispatch(routerChange(history, Components, {...match, query}))
     })
 }
 
