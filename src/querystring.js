@@ -1,7 +1,10 @@
 
+import _isString from 'lodash/isString'
+import _isPlainObject from 'lodash/isPlainObject'
+
 // parse querystring
 export function parse(str) {
-  if (!str || typeof str !== 'string') {
+  if (!_isString(str)) {
     return {}
   }
   return str.split('&').reduce((obj, item) => {
@@ -22,7 +25,7 @@ export function parse(str) {
 
 // stringify
 export function stringify(obj) {
-  if (!obj || typeof obj !== 'object') {
+  if (!_isPlainObject(obj)) {
     return ''
   }
   return Object.keys(obj).map(key => {
@@ -38,7 +41,7 @@ export function stringify(obj) {
 
 // merge queryString
 export function merge(str, opts) {
-  let query = parse(str)
+  let query = typeof opts === 'string' ? parse(opts) : opts
   let query2 = typeof opts === 'string' ? parse(opts) : opts
   return stringify({...query, ...query2})
 }

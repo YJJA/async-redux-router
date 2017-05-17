@@ -5,16 +5,21 @@
   "scripts": {
     "babel": "babel src --out-dir lib"
   },
-  "keywords": ["async router", "redux router", "react router"],
+  "keywords": [
+    "async router",
+    "redux router",
+    "react router"
+  ],
   "author": "YJJA",
   "license": "MIT",
   "main": "./lib/index.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/YJJA/async-redux-router.git"
+    "type": "git",
+    "url": "https://github.com/YJJA/async-redux-router.git"
   },
   "dependencies": {
     "history": "^4.5.1",
+    "lodash": "^4.17.4",
     "prop-types": "^15.5.4"
   },
   "devDependencies": {
