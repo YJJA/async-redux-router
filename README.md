@@ -1,5 +1,6 @@
 # async-redux-router
   [![Build Status](https://travis-ci.org/YJJA/async-redux-router.svg?branch=master)](https://travis-ci.org/YJJA/async-redux-router)
+
   A async routing for React
 
 ### Install
