@@ -8,7 +8,7 @@
 
 ### Dependencies
   ```
-    npm install react redux --save
+    npm install react redux react-redux --save
   ```
 
 ### Features

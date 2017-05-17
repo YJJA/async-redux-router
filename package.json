@@ -18,9 +18,10 @@
     "url": "https://github.com/YJJA/async-redux-router.git"
   },
   "dependencies": {
-    "history": "^4.5.1",
+    "history": "^4.6.1",
     "lodash": "^4.17.4",
-    "prop-types": "^15.5.4"
+    "prop-types": "^15.5.10",
+    "querystring": "^0.2.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
@@ -28,6 +29,9 @@
     "babel-plugin-transform-class-properties": "^6.23.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-es2015": "^6.24.0",
-    "babel-preset-react": "^6.23.0"
+    "babel-preset-react": "^6.23.0",
+    "react": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "redux": "^3.6.0"
   }
 }

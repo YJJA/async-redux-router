@@ -1,4 +1,4 @@
-const loadRoutes = (dispatch, location, branch) => {
+const loadRoutes = (dispatch, location, query, branch) => {
   const promise = branch.map(({match, route}) => {
     if (typeof window !== 'object' && !route.server) {
       return null
@@ -12,8 +12,8 @@ const loadRoutes = (dispatch, location, branch) => {
     .then((Components) => {
       // Initializing Components data
       const promise = Components.map(Component => {
-        if (typeof window !== 'object' && Component && typeof Component.getInitialProps === 'function') {
-          return Component.getInitialProps(dispatch, location)
+        if (typeof window !== 'object' && Component && typeof Component.dispatchInitialAction === 'function') {
+          return Component.dispatchInitialAction(dispatch, location, query)
         }
         return null
       })
