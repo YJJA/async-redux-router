@@ -1,1 +1,1 @@
-export default from 'querystring'
+export {default} from 'querystring'

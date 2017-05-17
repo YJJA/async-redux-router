@@ -19,7 +19,7 @@ const Index = props => {
  * @param  {Function} dispatch store.dispatch
  * @param  {Object} location history.location
  */
-Index.dispatchInitialAction = async (dispatch, location) => {
+Index.dispatchInitialAction = async ({store, location, query}) => {
   console.log('getInitialProps()')
   await Promise.resolve()
 }

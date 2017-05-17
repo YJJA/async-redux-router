@@ -2,10 +2,12 @@ import React from 'react'
 import {connect} from 'react-redux'
 import _noop from 'lodash/noop'
 
-function defaultMapDispathToProps() {
+// mapSomethingToProps
+function mapSomethingToProps() {
   return {}
 }
 
+// with redux
 export default function withRedux(...args) {
   return (Component) => {
     const ConnectedComponent = connect.apply(null, args)(Component)
@@ -14,18 +16,20 @@ export default function withRedux(...args) {
       return React.createElement(ConnectedComponent, props)
     }
 
-    WithReduxWrapper.dispatchInitialAction = (dispatch, location, query) => {
+    WithReduxWrapper.dispatchInitialAction = ({store, location, query}) => {
       const [
-        mapStateToProps,
-        mapDispatchToProps = defaultMapDispathToProps
+        mapStateToProps = mapSomethingToProps,
+        mapDispatchToProps = mapSomethingToProps
       ] = args
 
+      const dispatch = action => store.dispatch(action)
+      const state = defaultMapToProps(store.getState())
       const actions = mapDispatchToProps(dispatch)
       const dispatchInitialAction = Component.dispatchInitialAction || Component.getInitialProps || _noop
       return Promise.all([
-          dispatchInitialAction({...actions, location, query})
+          dispatchInitialAction({...actions, ...state, location, query})
         ])
-        .then([data] => data || {})
+        .then(([data]) => data || {})
     }
   }
 }
