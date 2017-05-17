@@ -2,6 +2,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import {connect} from 'react-redux'
 
 const isModifiedEvent = (event) =>
   !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey)
@@ -11,6 +12,13 @@ const isModifiedEvent = (event) =>
  */
 class Link extends React.Component {
   static propTypes = {
+    router: PropTypes.shape({
+      history: PropTypes.shape({
+        push: PropTypes.func.isRequired,
+        replace: PropTypes.func.isRequired,
+        createHref: PropTypes.func.isRequired
+      }).isRequired
+    }).isRequired,
     onClick: PropTypes.func,
     target: PropTypes.string,
     replace: PropTypes.bool,
@@ -22,17 +30,7 @@ class Link extends React.Component {
 
   static defaultProps = {
     replace: false
-  };
-
-  static contextTypes = {
-    router: PropTypes.shape({
-      history: PropTypes.shape({
-        push: PropTypes.func.isRequired,
-        replace: PropTypes.func.isRequired,
-        createHref: PropTypes.func.isRequired
-      }).isRequired
-    }).isRequired
-  };
+  }
 
   handleClick = (event) => {
     if (this.props.onClick) {
@@ -47,7 +45,7 @@ class Link extends React.Component {
     ) {
       event.preventDefault()
 
-      const { history } = this.context.router
+      const { history } = this.props.router
       const { replace, to } = this.props
 
       if (replace) {
@@ -59,9 +57,9 @@ class Link extends React.Component {
   }
 
   render() {
-    const { replace, to, ...props } = this.props // eslint-disable-line no-unused-vars
+    const { replace, to, router, dispatch, ...props } = this.props // eslint-disable-line no-unused-vars
 
-    const href = this.context.router.history.createHref(
+    const href = router.history.createHref(
       typeof to === 'string' ? { pathname: to } : to
     )
 
@@ -69,4 +67,6 @@ class Link extends React.Component {
   }
 }
 
-export default Link
+export default connect(
+  ({router}) => ({router})
+)(Link)

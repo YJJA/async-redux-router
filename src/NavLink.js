@@ -2,9 +2,13 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import Link from './Link'
 import matchPath from './matchPath'
+import {connect} from 'react-redux'
 
 class NavLink extends Component {
   static propTypes = {
+    router: PropTypes.shape({
+      history: PropTypes.object.isRequired
+    }).isRequired,
     to: Link.propTypes.to,
     exact: PropTypes.bool,
     strict: PropTypes.bool,
@@ -16,14 +20,8 @@ class NavLink extends Component {
     activeClassName: 'active'
   };
 
-  static contextTypes = {
-    router: PropTypes.shape({
-      history: PropTypes.object.isRequired
-    }).isRequired
-  };
-
   render() {
-    const {location} = this.context.router.history
+    const {location} = this.props.router.history
     const {activeClassName, className, to, exact, strict, ...props} = this.props
     const isActive = matchPath(location.pathname, { path: to, exact, strict })
 
@@ -31,4 +29,6 @@ class NavLink extends Component {
   }
 }
 
-export default NavLink
+export default connect(
+  ({router}) => ({router})
+)(NavLink)

@@ -1,5 +1,5 @@
 
-export const ROUTER_LOCATION_CHANGE = 'ROUTER_LOCATION_CHANGE'
+export const ROUTER_LOCATION_CHANGE = '@ASYNC-REDUX-ROUTER/CHANGE'
 
 const routerChange = (history, Components, match) => {
   return {
