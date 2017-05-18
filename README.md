@@ -13,7 +13,7 @@
 
 ### Dependencies
   ```
-    npm install react redux react-dom react-redux --save
+    npm install react redux react-dom react-redux prop-types --save
   ```
 
 ### Features

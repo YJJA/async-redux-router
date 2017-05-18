@@ -16,20 +16,22 @@ export default function withRedux(...args) {
       return React.createElement(ConnectedComponent, props)
     }
 
-    WithReduxWrapper.dispatchInitialAction = ({store, location, query}) => {
+    WithReduxWrapper.getInitialProps = ({store, location, query}) => {
       const [
         mapStateToProps = mapSomethingToProps,
         mapDispatchToProps = mapSomethingToProps
       ] = args
 
       const dispatch = action => store.dispatch(action)
-      const state = defaultMapToProps(store.getState())
+      const state = mapStateToProps(store.getState())
       const actions = mapDispatchToProps(dispatch)
-      const dispatchInitialAction = Component.dispatchInitialAction || Component.getInitialProps || _noop
+      const getInitialProps = Component.getInitialProps || _noop
       return Promise.all([
-          dispatchInitialAction({...actions, ...state, location, query})
+          getInitialProps({...actions, ...state, location, query})
         ])
         .then(([data]) => data || {})
     }
+
+    return WithReduxWrapper
   }
 }

@@ -1,9 +1,9 @@
 {
   "name": "async-redux-router",
-  "version": "1.1.19",
+  "version": "1.1.20",
   "description": "A async routing for React",
   "scripts": {
-    "babel": "babel src --out-dir lib",
+    "build": "babel src --out-dir lib",
     "test-ci": "jest test"
   },
   "keywords": [
@@ -21,7 +21,6 @@
   "dependencies": {
     "history": "^4.6.1",
     "lodash": "^4.17.4",
-    "prop-types": "^15.5.10",
     "querystring": "^0.2.0"
   },
   "devDependencies": {

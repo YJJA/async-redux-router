@@ -12,8 +12,8 @@ const loadRoutes = (store, location, query, branch) => {
     .then((Components) => {
       // Initializing Components data
       const promise = Components.map(Component => {
-        if (Component && typeof Component.dispatchInitialAction === 'function') {
-          return Component.dispatchInitialAction({store, location, query})
+        if (Component && typeof Component.getInitialProps === 'function') {
+          return Component.getInitialProps({store, location, query})
         }
         return null
       })

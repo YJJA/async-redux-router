@@ -7,7 +7,7 @@
 
     const Home = (props) => <div>this is Home page</div>
 
-    Home.dispatchInitialAction = async ({home, homeActions}) => {
+    Home.getInitialProps = async ({home, homeActions}) => {
       const home = await homeActions.fechHome()
       return {home}
     }

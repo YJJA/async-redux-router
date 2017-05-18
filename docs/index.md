@@ -9,7 +9,7 @@
   * [NavLink](guides/NavLink.md)
   * [routerReducer](guides/routerReducer.md)
   * [connect](guides/connect.md)
-  * [dispatchInitialAction](guides/dispatchInitialAction.md)
+  * [getInitialProps](guides/getInitialProps.md)
 
 ## example
   ```js

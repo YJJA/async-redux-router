@@ -12,7 +12,8 @@
         // Server render
         server: true,
 
-        // Authentication, through the verification does not return the value, not to return to the jump through validation URL
+        // Authentication,
+        // through the verification does not return the value, not to return to the jump through validation URL
         redirect: (state, location) => {
           // return '/login?login=true&this=login'
 

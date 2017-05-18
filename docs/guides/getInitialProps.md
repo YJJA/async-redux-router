@@ -11,14 +11,14 @@
     // store ---> redux store
     // location ---> history.location
     // query
-    Home.dispatchInitialAction = async ({store, location, query}) => {
+    Home.getInitialProps = async ({store, location, query}) => {
       await homeActions.fechHome()
     }
 
     // an other one
     const Index = (props) => <div>this is Index page</div>
 
-    Index.dispatchInitialAction = async ({index, indexAction, location, query}) {
+    Index.getInitialProps = async ({index, indexAction, location, query}) {
       await indexAction.fechIndex()
     }
 
