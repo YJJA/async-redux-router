@@ -9,7 +9,10 @@ class NavLink extends Component {
     router: PropTypes.shape({
       history: PropTypes.object.isRequired
     }).isRequired,
-    to: Link.propTypes.to,
+    to: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.object
+    ]).isRequired,
     exact: PropTypes.bool,
     strict: PropTypes.bool,
     activeClass: PropTypes.string,
