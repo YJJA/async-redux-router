@@ -4,6 +4,8 @@
 
   A async routing for React
 
+  [docs 1.x](docs/index.md)
+
 ### Install
   ```
     npm install async-redux-router --save
@@ -11,7 +13,7 @@
 
 ### Dependencies
   ```
-    npm install react redux react-redux --save
+    npm install react redux react-dom react-redux --save
   ```
 
 ### Features

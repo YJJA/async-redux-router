@@ -1,17 +1,6 @@
-# Async-redux-router
-  A async routing for React
+# asyncContainer
+  initial async Container component
 
-## Guides
-  * [asyncContainer](guides/asyncContainer.md)
-  * [routes Configuration](guides/routesConfiguration.md)
-  * [Container](guides/Container.md)
-  * [Link](guides/Link.md)
-  * [NavLink](guides/NavLink.md)
-  * [routerReducer](guides/routerReducer.md)
-  * [connect](guides/connect.md)
-  * [dispatchInitialAction](guides/dispatchInitialAction.md)
-
-## example
   ```
     import React from 'react'
     import {createStore} from 'redux'
