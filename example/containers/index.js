@@ -13,13 +13,13 @@ const Index = props => {
   )
 }
 
-// getInitialProps
+// dispatchInitialActions
 /**
- * get Initial Props
+ * get dispatch Initial action
  * @param  {Function} dispatch store.dispatch
  * @param  {Object} location history.location
  */
-Index.getInitialProps = async (dispatch, location) => {
+Index.dispatchInitialAction = async ({store, location, query}) => {
   console.log('getInitialProps()')
   await Promise.resolve()
 }

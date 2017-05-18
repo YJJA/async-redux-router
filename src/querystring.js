@@ -1,2 +1,1 @@
-import qs from 'querystring'
-export default qs
+export {default} from 'querystring'

@@ -10,7 +10,7 @@ const isModifiedEvent = (event) =>
 /**
  * The public API for rendering a history-aware <a>.
  */
-class Link extends React.Component {
+export class Link extends React.Component {
   static propTypes = {
     router: PropTypes.shape({
       history: PropTypes.shape({

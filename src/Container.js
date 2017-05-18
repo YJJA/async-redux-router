@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 
-class Container extends Component {
+export class Container extends Component {
   static propTypes = {
     router: PropTypes.shape({
       Components: PropTypes.array,

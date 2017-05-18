@@ -1,4 +1,7 @@
 # async-redux-router
+  [![Build Status](https://travis-ci.org/YJJA/async-redux-router.svg?branch=master)](https://travis-ci.org/YJJA/async-redux-router)
+  [![npm](https://img.shields.io/npm/v/async-redux-router.svg)](https://www.npmjs.com/package/async-redux-router)
+
   A async routing for React
 
 ### Install
@@ -8,7 +11,7 @@
 
 ### Dependencies
   ```
-    npm install react redux --save
+    npm install react redux react-redux --save
   ```
 
 ### Features

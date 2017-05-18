@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link create has success 1`] = `
+<a
+  href={undefined}
+  onClick={[Function]}
+>
+  Facebook Github
+</a>
+`;

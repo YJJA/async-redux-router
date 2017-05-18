@@ -43,10 +43,9 @@ const asyncContainer = (store, history, routes) => {
     unlisten = history.listen(() => asyncContainer(store, history, routes))
   }
 
-  const dispatch = action => store.dispatch(action)
   const match = branch[branch.length - 1].match
   const query = qs.parse(history.location.search.substr(1))
-  return loadRoutes(dispatch, history.location, branch)
+  return loadRoutes(store, history.location, query, branch)
     .then(Components => {
       store.dispatch(routerChange(history, Components, {...match, query}))
     })
