@@ -1,7 +1,7 @@
 # routes Configuration
   routes Configuration
 
-  ```
+  ```js
     const routes = [
       {
         path: '/index',

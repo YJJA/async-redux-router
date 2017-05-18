@@ -1,7 +1,7 @@
 # asyncContainer
   initial async Container component
 
-  ```
+  ```js
     import React from 'react'
     import {createStore} from 'redux'
     import createHistory from 'history/createBrowserHistory'

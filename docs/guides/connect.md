@@ -1,7 +1,7 @@
 # connect
   use like React-redux connect function
 
-  ```
+  ```js
     import React from 'react'
     import { connect } from 'async-redux-router'
 

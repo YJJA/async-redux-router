@@ -1,7 +1,7 @@
 # dispatchInitialAction
   initial dispatch action
 
-  ```
+  ```js
     import React from 'react'
     import { connect } from 'async-redux-router'
 

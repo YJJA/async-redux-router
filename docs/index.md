@@ -12,7 +12,7 @@
   * [dispatchInitialAction](guides/dispatchInitialAction.md)
 
 ## example
-  ```
+  ```js
     import React from 'react'
     import {createStore} from 'redux'
     import createHistory from 'history/createBrowserHistory'
