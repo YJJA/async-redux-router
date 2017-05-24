@@ -18,6 +18,9 @@
     "type": "git",
     "url": "https://github.com/YJJA/async-redux-router.git"
   },
+  "engines": {
+    "node": ">= 6.10"
+  },
   "dependencies": {
     "history": "^4.6.1",
     "lodash": "^4.17.4",
