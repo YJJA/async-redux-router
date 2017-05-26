@@ -1,0 +1,26 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "A async-redux-router example",
+  "scripts": {
+    "start": "structure start app",
+    "build": "structure build app"
+  },
+  "keywords": [],
+  "author": "YJJA",
+  "license": "MIT",
+  "devDependencies": {
+    "structure-tool": "^0.2.12"
+  },
+  "dependencies": {
+    "async-redux-router": "^1.1.20",
+    "express": "^4.15.3",
+    "fs-extra": "^3.0.1",
+    "key-mirror": "^1.0.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
+  }
+}

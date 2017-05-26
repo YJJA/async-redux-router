@@ -53,7 +53,7 @@ const asyncContainer = (store, history, routes) => {
 
 export default asyncContainer
 
-function getRedirect(state, branch, from_uri) {
+function getRedirect(state, branch, fromUri) {
   let redirect = {
     to: '',
     replace: true
@@ -71,7 +71,7 @@ function getRedirect(state, branch, from_uri) {
     if (!_isEmpty(to)) {
       if (_isString(to)) {
         return {...redirect, to}
-      } else if(_isPlainObject(to)) {
+      } else if (_isPlainObject(to)) {
         return {...redirect, ...to}
       }
     }

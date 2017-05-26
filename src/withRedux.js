@@ -27,8 +27,8 @@ export default function withRedux(...args) {
       const actions = mapDispatchToProps(dispatch)
       const getInitialProps = Component.getInitialProps || _noop
       return Promise.all([
-          getInitialProps({...actions, ...state, location, query})
-        ])
+        getInitialProps({...actions, ...state, location, query})
+      ])
         .then(([data]) => data || {})
     }
 

@@ -1,5 +1,5 @@
-# dispatchInitialAction
-  initial dispatch action
+# getInitialProps
+  get initial props
 
   ```js
     import React from 'react'

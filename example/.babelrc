@@ -1,0 +1,3 @@
+{
+  "presets": ["structure-tool/config/babel-preset"]
+}

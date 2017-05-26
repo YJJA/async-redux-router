@@ -1,10 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
-import configureStore from './configureStore'
 import createHistory from 'history/createBrowserHistory'
+
+import asyncContainer from '../../src/asyncContainer'
+import Container from '../../src/Container'
+
+import configureStore from './store/configureStore'
 import routes from './routes'
-import {asyncContainer, Container} from 'async-redux-router'
 
 const store = configureStore(window.__INITIAL_STATE__)
 const history = createHistory()
@@ -17,5 +20,3 @@ asyncContainer(store, history, routes).then(() => {
     document.getElementById('app')
   )
 })
-
-
