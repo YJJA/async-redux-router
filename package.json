@@ -1,6 +1,6 @@
 {
   "name": "async-redux-router",
-  "version": "1.1.20",
+  "version": "1.1.25",
   "description": "A async routing for React",
   "scripts": {
     "build": "babel src --out-dir lib",
